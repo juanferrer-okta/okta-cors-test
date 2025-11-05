@@ -31,5 +31,6 @@ You can enable CORS for websites that need cross-origin requests to the Okta API
 > If you want to test your configuration, Grant cross-origin access to `https://developer.okta.com` and upload your Okta subdomain on the [form](https://developer.okta.com/docs/guides/enable-cors/main/#test-your-configuration) included and click **Test**.
 
 Once saved, refresh your local HTML page (`http://localhost:8080/cors-test.html` or `http://127.0.0.1:5500/cors-test.html`). The request should now succeed, as the Okta server will recognize your local development server as a trusted origin and respond with the necessary CORS headers.
+
 <img width="966" height="587" alt="Screenshot 2025-11-05 at 2 25 37 p m" src="https://github.com/user-attachments/assets/c3ff4ae0-c8ef-4d41-ab92-1a639ae683c7" />
 
