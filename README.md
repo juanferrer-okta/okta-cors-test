@@ -9,11 +9,11 @@ You cannot simply open this file using `file://....` You must host it using a si
   - **Python 3:** `python -m http.server 8080`
   - The page will be accessible at `http://localhost:8080/cors-test.html`.
     
-As the provided documentation hints, endpoints callable from a browser often take a session cookie and use **/me** instead of a resource ID. The ideal endpoint for a browser-based CORS test is to get the currently authenticated user:
-> **Endpoint:** `GET /api/v1/users/me`
 
 ## 2. Replace your Okta domain
 + Replace `{$yourOktaDomain}` in the `okta-cors-test.js` file with your actual Okta domain.
++ Endpoints callable from a browser often take a session cookie and use `/me` instead of a resource ID. The ideal endpoint for a browser-based CORS test is to get the currently authenticated user:
+> **Endpoint:** `GET /api/v1/users/me`
 <img width="1150" height="472" alt="oktadomain" src="https://github.com/user-attachments/assets/01067fa7-a27d-41d7-ba7e-eb856baac9ac" />
 
 ## 3. Grant cross-origin access to websites
@@ -30,4 +30,6 @@ You can enable CORS for websites that need cross-origin requests to the Okta API
 > [!NOTE]
 > If you want to test your configuration, Grant cross-origin access to `https://developer.okta.com` and upload your Okta subdomain on the [form](https://developer.okta.com/docs/guides/enable-cors/main/#test-your-configuration) included and click **Test**.
 
-Once saved, refresh your local HTML page `(http://localhost:8080/cors-test.html)`. The request should now succeed, as the Okta server will recognize your local development server as a trusted origin and respond with the necessary CORS headers.
+Once saved, refresh your local HTML page (`http://localhost:8080/cors-test.html` or `http://127.0.0.1:5500/cors-test.html`). The request should now succeed, as the Okta server will recognize your local development server as a trusted origin and respond with the necessary CORS headers.
+<img width="966" height="587" alt="Screenshot 2025-11-05 at 2 25 37 p m" src="https://github.com/user-attachments/assets/c3ff4ae0-c8ef-4d41-ab92-1a639ae683c7" />
+
