@@ -1,0 +1,53 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+#status {
+    font-weight: bold;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Style for successful requests */
+#status:has(+ #result:not(:empty)) {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Style for the results container */
+#result {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    white-space: pre-wrap; /* Ensures the formatted text wraps but preserves structure */
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling the "Profile" header within the pre tag */
+#result::first-line {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3498db;
+    display: block;
+    margin-bottom: 10px;
+}
