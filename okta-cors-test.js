@@ -1,5 +1,5 @@
 // add your domain on the oktaDomain
-const oktaDomain = 'example-oie.okta.com'; 
+const oktaDomain = '{$yourOktaDomain}'; 
 const meEndpoint = `https://${oktaDomain}/api/v1/users/me`;
 const resultElement = document.getElementById('result');
 const statusElement = document.getElementById('status');
